@@ -8,12 +8,12 @@ const Routes = () => (
         <Route
             exact
             path='/'
-            component={ Search }
+            component={Search}
         />
             <Route
             exact
             path='/'
-            component={ Products }
+            component={Products}
         />
         <Route
             component={ () => (
