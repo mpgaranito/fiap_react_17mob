@@ -2,6 +2,7 @@
   "name": "fiap-react-17mob",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mpgaranito.github.io/fiap_react_17mob/",
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.8.6",
