@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-
+import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class Search extends Component {
@@ -25,23 +25,32 @@ class Search extends Component {
     }
 
     renderItem(item) {
+        
+        console.log(item);
         return (
-            <li key={item.id}>
-                <span>{item.id}</span>
-                <span>{item.title}</span>
-            </li>
+            <Fragment>
+                <div className="mdl-cell mdl-cell--2-col">
+                    <p> <img src={item.thumbnail}></img></p>
+                    <p><Link to={'product/' + item.id}>{item.title}</Link></p>
+                </div>
+            </Fragment>    
+                 
+                
+         
         )
     }
 
     render() {
         return (
-            <div>
-                <input type="text" onChange={this.onSearch} />
-
-                <ul>
+            <Fragment>
+              
+                <div> <input style={{ minWidth: '100%', minHeight: '50px', }} className="mdl-textfield__input" type="text" onChange={this.onSearch}
+                    id="txtFind" name="txtFind" placeholder="Buscar produtos, marcas e muito mais…" maxLength="120" />
+                </div>
+                <div className="mdl-grid">
                     {this.state.results.map(this.renderItem)}
-                </ul>
-            </div>
+                </div>
+            </Fragment>
         );
     }
 }

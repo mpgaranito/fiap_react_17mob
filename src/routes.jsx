@@ -13,7 +13,7 @@ const Routes = () => (
         />
        
         <Route exact
-            path={`${path}Product/:i`}
+            path={`${path}Product/:id`}
             component={Product}
         />
         <Route
