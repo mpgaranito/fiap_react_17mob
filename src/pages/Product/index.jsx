@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import axios from "axios";
-import NumberFormat from "react-number-format";
 import formatPrice from "../../utils/format";
 
 class Product extends Component {
@@ -37,36 +36,57 @@ class Product extends Component {
 
   renderPicture() {
     const { data } = this.state;
+    const textDescription = {
+      color: "gray",
+      textAlign: "justify"
+    };
     return (
       <Fragment>
-        <div className="mdl-js-layout">
-          <div className="mdl-col-2">
-            {" "}
+        <div className="mdl-grid">
+          <div className="mdl-cell mdl-cell--12-col">
             <img
               src={this.state.data.pictures[0].url}
-              width="300px"
+              width="360px"
               alt="Figura Produto"
             />
           </div>
-          <div className="mdl-col-2">
-            <p>{this.state.data.sold_quantity} Vendedores</p>
-            <h3>{this.state.data.title}</h3>
-          </div>
-          <div className="mdl-col-2">
-            <h3>
-              <b>{formatPrice(this.state.data.price)}</b>
-            </h3>
-          </div>
-          <div className="mdl-col-2">
-            <h5>
-              <b>Descrição</b>
-            </h5>
-            <p>{this.state.data.description}</p>
+        </div>
+        <div className="mdl-grid">
+          <div className="mdl-cell mdl-cell--12-col">
+            <p>{this.state.data.sold_quantity} Vendidos</p>
           </div>
         </div>
-        <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-          Comprar
-        </button>
+
+        <div className="mdl-grid">
+          <div className="mdl-cell mdl-cell--12-col">
+            <h2> {this.state.data.title}</h2>
+          </div>
+        </div>
+        <div className="mdl-grid">
+          <div className="mdl-cell mdl-cell--12-col">
+            <h5>{formatPrice(this.state.data.price)}</h5>
+          </div>
+        </div>
+        <div className="mdl-grid">
+          <div className="mdl-cell mdl-cell--12-col">
+            <a
+              href="/"
+              className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            >
+              Comprar
+            </a>
+          </div>
+        </div>
+        <div className="mdl-grid">
+          <div className="mdl-cell mdl-cell--12-col">
+            <h5>Descrição</h5>
+          </div>
+        </div>
+        <div className="mdl-grid">
+          <div className="mdl-cell mdl-cell--12-col">
+            <p style={textDescription}>{this.state.data.description}</p>
+          </div>
+        </div>
       </Fragment>
     );
   }
