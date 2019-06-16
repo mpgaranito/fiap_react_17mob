@@ -39,9 +39,10 @@ class Product extends Component {
 
     const path =
       window.location.hostname !== "localhost" ? "/fiap_react_17mob/" : "/";
-    const textCenterBlue = {
+    const textCenterGrayCenter = {
       color: "gray",
-      textAlign: "center"
+      textAlign: "center",
+      fontSize: "10pt"
     };
     const textCenter = {
       color: "#000000",
@@ -65,9 +66,9 @@ class Product extends Component {
         </div>
         <div className="mdl-grid">
           <div className="mdl-cell mdl-cell--12-col">
-            <p style={textCenterBlue}>
-              {this.state.data.sold_quantity} Vendidos -
-              {this.state.data.seller_address.city.name} -
+            <p style={textCenterGrayCenter}>
+              {this.state.data.sold_quantity} Vendidos -{" "}
+              {this.state.data.seller_address.city.name} -{" "}
               {this.state.data.seller_address.state.name}
             </p>
           </div>
