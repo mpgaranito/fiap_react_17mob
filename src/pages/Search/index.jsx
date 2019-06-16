@@ -4,6 +4,7 @@ import axios from 'axios';
 import formatPrice from '../../utils/format'
 
 class Search extends Component {
+    
     constructor() {
         super();
 

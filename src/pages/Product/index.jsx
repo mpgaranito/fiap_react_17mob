@@ -36,6 +36,17 @@ class Product extends Component {
 
   renderPicture() {
     // const { data } = this.state;
+
+    const path =
+      window.location.hostname !== "localhost" ? "/fiap_react_17mob/" : "/";
+    const textCenterBlue = {
+      color: "blue",
+      textAlign: "center"
+    };
+    const textCenter = {
+      color: "#000000",
+      textAlign: "center"
+    };
     const textDescription = {
       color: "gray",
       textAlign: "justify"
@@ -46,32 +57,35 @@ class Product extends Component {
           <div className="mdl-cell mdl-cell--12-col">
             <img
               src={this.state.data.pictures[0].url}
-              width="360px"
+              width="250px"
+              align="center"
               alt="Figura Produto"
             />
           </div>
         </div>
         <div className="mdl-grid">
           <div className="mdl-cell mdl-cell--12-col">
-            <p>{this.state.data.sold_quantity} Vendidos</p>
+            <p style={textCenterBlue}>
+              {this.state.data.sold_quantity} Vendidos
+            </p>
           </div>
         </div>
 
         <div className="mdl-grid">
           <div className="mdl-cell mdl-cell--12-col">
-            <h2> {this.state.data.title}</h2>
+            <h3 style={textCenter}> {this.state.data.title}</h3>
           </div>
         </div>
         <div className="mdl-grid">
           <div className="mdl-cell mdl-cell--12-col">
-            <h5>{formatPrice(this.state.data.price)}</h5>
+            <h3 style={textCenter}>{formatPrice(this.state.data.price)}</h3>
           </div>
         </div>
         <div className="mdl-grid">
           <div className="mdl-cell mdl-cell--12-col">
             <a
-              href="/"
-              className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+              href={path}
+              className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
             >
               Comprar
             </a>
