@@ -35,7 +35,7 @@ class Product extends Component {
   }
 
   renderPicture() {
-    const { data } = this.state;
+    // const { data } = this.state;
     const textDescription = {
       color: "gray",
       textAlign: "justify"
