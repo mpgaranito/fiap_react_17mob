@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/fiap_react_17mob/static/css/main.03a3ab65.chunk.css",
-    "main.js": "/fiap_react_17mob/static/js/main.3aeb7135.chunk.js",
-    "main.js.map": "/fiap_react_17mob/static/js/main.3aeb7135.chunk.js.map",
+    "main.js": "/fiap_react_17mob/static/js/main.0e08fb41.chunk.js",
+    "main.js.map": "/fiap_react_17mob/static/js/main.0e08fb41.chunk.js.map",
     "runtime~main.js": "/fiap_react_17mob/static/js/runtime~main.52e62bfe.js",
     "runtime~main.js.map": "/fiap_react_17mob/static/js/runtime~main.52e62bfe.js.map",
     "static/js/2.5249c8b7.chunk.js": "/fiap_react_17mob/static/js/2.5249c8b7.chunk.js",
     "static/js/2.5249c8b7.chunk.js.map": "/fiap_react_17mob/static/js/2.5249c8b7.chunk.js.map",
     "index.html": "/fiap_react_17mob/index.html",
-    "precache-manifest.f0e92c0d35bada42cd529995a3fd2ab5.js": "/fiap_react_17mob/precache-manifest.f0e92c0d35bada42cd529995a3fd2ab5.js",
+    "precache-manifest.eb2582914b6b7f67d8b1a3284aead4bd.js": "/fiap_react_17mob/precache-manifest.eb2582914b6b7f67d8b1a3284aead4bd.js",
     "service-worker.js": "/fiap_react_17mob/service-worker.js",
     "static/css/main.03a3ab65.chunk.css.map": "/fiap_react_17mob/static/css/main.03a3ab65.chunk.css.map",
     "static/media/logo.svg": "/fiap_react_17mob/static/media/logo.5d5d9eef.svg"
